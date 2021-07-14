@@ -25,6 +25,7 @@ public class MetricsService {
         allNonSynchronizedMetrics.forEach(metricsEntry -> metricsEntry.setSynchronized(true));
         metricsRepository.saveAll(allNonSynchronizedMetrics);
 
-        return averagePerType;
+        Double averagePerTypeTruncated = Math.floor(averagePerType * 100) / 100;
+        return averagePerTypeTruncated;
     }
 }
