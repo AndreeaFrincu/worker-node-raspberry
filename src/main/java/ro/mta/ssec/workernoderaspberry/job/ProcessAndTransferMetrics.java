@@ -48,7 +48,7 @@ public class ProcessAndTransferMetrics {
                                     averageValue
                             );
                         } catch (Exception e) {
-                            log.error("sending to aws failed. reason={}", e.getMessage());
+                            log.error("Sending metrics to master failed. reason={}", e.getMessage());
                         }
 
                     }
